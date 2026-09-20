@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="./style.css">
+</head>
+<body>
+         <div class="container">
+
+    <h1>🏥 Doctor Parchi</h1>
+
+    <label>Patient Name</label>
+    <input type="text" id="name" placeholder="Enter patient name">
+
+    <label>Age</label>
+    <input type="number" id="age" placeholder="Enter age">
+
+    <label>Mobile Number</label>
+    <input type="text" id="mobile" placeholder="Enter mobile number">
+
+    <label>Select Doctor</label>
+    <select id="doctor">
+        <option value="">-- Select Doctor --</option>
+        <option>Dr. Rajesh Kumar - General Physician</option>
+        <option>Dr. Priya Sharma - Dentist</option>
+        <option>Dr. Amit Verma - Cardiologist</option>
+        <option>Dr. Neha Singh - Pediatrician</option>
+    </select>
+
+    <label>Problem / Disease</label>
+    <textarea id="problem" rows="4"
+        placeholder="Enter your problem"></textarea>
+
+    <button onclick="generateParchi()">Generate Parchi</button>
+
+    <div id="parchi">
+
+        <div class="center">
+            <h2>🏥 CITY HOSPITAL</h2>
+            <p>Patient Registration Slip</p>
+            <hr>
+
+            <p class="token">
+                Token No: <span id="token"></span>
+            </p>
+        </div>
+
+        <p><b>Patient Name:</b> <span id="pname"></span></p>
+        <p><b>Age:</b> <span id="page"></span></p>
+        <p><b>Mobile:</b> <span id="pmobile"></span></p>
+        <p><b>Doctor:</b> <span id="pdoctor"></span></p>
+        <p><b>Problem:</b> <span id="pproblem"></span></p>
+        <p><b>Date:</b> <span id="date"></span></p>
+
+        <hr>
+
+        <div class="center">
+            <p>Thank You</p>
+            <button onclick="window.print()">🖨️ Print Parchi</button>
+        </div>
+
+    </div>
+
+</div>
+  <script src="./script.js"></script>
+</body>
+</html>
