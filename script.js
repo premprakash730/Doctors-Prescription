@@ -14,8 +14,6 @@ function generateParchi() {
         alert("Please fill all details!");
         return;
     }
-
-    // Random Token Number
     let tokenNumber = Math.floor(Math.random() * 100) + 1;
 
     document.getElementById("token").innerText = tokenNumber;
@@ -24,8 +22,6 @@ function generateParchi() {
     document.getElementById("pmobile").innerText = mobile;
     document.getElementById("pdoctor").innerText = doctor;
     document.getElementById("pproblem").innerText = problem;
-
-    // Current Date
     let today = new Date().toLocaleDateString();
     document.getElementById("date").innerText = today;
 
