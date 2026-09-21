@@ -4,66 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet"href="./style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-         <div class="container">
 
-    <h1>🏥 Doctor Parchi</h1>
+<div class="container">
 
-    <label>Patient Name</label>
-    <input type="text" id="name" placeholder="Enter patient name">
+    <!-- FORM -->
+    <div class="form-box">
 
-    <label>Age</label>
-    <input type="number" id="age" placeholder="Enter age">
+        <h1>🏥 CITY HOSPITAL</h1>
+        <p class="subtitle">Doctor Appointment & Prescription</p>
 
-    <label>Mobile Number</label>
-    <input type="text" id="mobile" placeholder="Enter mobile number">
+        <label>Patient Name</label>
+        <input type="text" id="name" placeholder="Enter patient name">
 
-    <label>Select Doctor</label>
-    <select id="doctor">
-        <option value="">-- Select Doctor --</option>
-        <option>Dr. Rajesh Kumar - General Physician</option>
-        <option>Dr. Priya Sharma - Dentist</option>
-        <option>Dr. Amit Verma - Cardiologist</option>
-        <option>Dr. Neha Singh - Pediatrician</option>
-    </select>
+        <label>Age</label>
+        <input type="number" id="age" placeholder="Enter age">
 
-    <label>Problem / Disease</label>
-    <textarea id="problem" rows="4"
-        placeholder="Enter your problem"></textarea>
+        <label>Gender</label>
+        <select id="gender">
+            <option value="">-- Select Gender --</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
 
-    <button onclick="generateParchi()">Generate Parchi</button>
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" placeholder="Enter mobile number">
+
+        <label>Select Doctor</label>
+        <select id="doctor">
+            <option value="">-- Select Doctor --</option>
+            <option>Dr. Rituraj Singh - General Physician</option>
+            <option>Dr. Aman Pal - Dentist</option>
+            <option>Dr. Anjali Verma - Cardiologist</option>
+            <option>Dr. Neha Singh - Pediatrician</option>
+        </select>
+
+        <label>Problem / Symptoms</label>
+        <textarea id="problem"
+            placeholder="Enter patient problem or symptoms"></textarea>
+
+        <label>Diagnosis</label>
+        <textarea id="diagnosis"
+            placeholder="Enter diagnosis"></textarea>
+
+        <label>Medicines</label>
+        <textarea id="medicine"
+            placeholder="Example: Paracetamol - 1 tablet - Twice a day"></textarea>
+
+        <button onclick="generateParchi()">
+            📄 Generate Parchi
+        </button>
+
+    </div>
+
 
     <div id="parchi">
 
-        <div class="center">
-            <h2>🏥 CITY HOSPITAL</h2>
-            <p>Patient Registration Slip</p>
-            <hr>
+        <div class="hospital-header">
 
-            <p class="token">
-                Token No: <span id="token"></span>
-            </p>
+            <div class="logo">
+                🏥
+            </div>
+
+            <div>
+                <h1>CITY HOSPITAL</h1>
+                <p>Healthcare & Medical Centre</p>
+                <p>📍 Main Road, Lucknow | ☎ 7307741810</p>
+            </div>
+
         </div>
-
-        <p><b>Patient Name:</b> <span id="pname"></span></p>
-        <p><b>Age:</b> <span id="page"></span></p>
-        <p><b>Mobile:</b> <span id="pmobile"></span></p>
-        <p><b>Doctor:</b> <span id="pdoctor"></span></p>
-        <p><b>Problem:</b> <span id="pproblem"></span></p>
-        <p><b>Date:</b> <span id="date"></span></p>
 
         <hr>
 
-        <div class="center">
-            <p>Thank You</p>
-            <button onclick="window.print()">🖨️ Print Parchi</button>
+
+        <div class="slip-title">
+            <h2>DOCTOR PRESCRIPTION</h2>
+            <p>Patient Registration Slip</p>
         </div>
+
+
+        <div class="token-box">
+
+            <div>
+                <b>Token No.</b>
+                <span id="token"></span>
+            </div>
+
+            <div>
+                <b>Date</b>
+                <span id="date"></span>
+            </div>
+
+            <div>
+                <b>Time</b>
+                <span id="time"></span>
+            </div>
+
+        </div>
+
+
+        <h3>👤 Patient Details</h3>
+
+        <div class="patient-details">
+
+            <p>
+                <b>Patient Name:</b>
+                <span id="pname"></span>
+            </p>
+
+            <p>
+                <b>Age:</b>
+                <span id="page"></span>
+            </p>
+
+            <p>
+                <b>Gender:</b>
+                <span id="pgender"></span>
+            </p>
+
+            <p>
+                <b>Mobile:</b>
+                <span id="pmobile"></span>
+            </p>
+
+            <p>
+                <b>Doctor:</b>
+                <span id="pdoctor"></span>
+            </p>
+
+        </div>
+
+
+        <h3>🩺 Patient Problem / Symptoms</h3>
+
+        <div class="content-box">
+            <p id="pproblem"></p>
+        </div>
+
+
+        <h3>🔎 Diagnosis</h3>
+
+        <div class="content-box">
+            <p id="pdiagnosis"></p>
+        </div>
+
+
+        <h3>💊 Medicines / Prescription</h3>
+
+        <div class="medicine-box">
+            <p id="pmedicine"></p>
+        </div>
+
+
+        <div class="advice">
+
+            <h3>📌 Doctor's Advice</h3>
+
+            <p>
+                Take medicines as prescribed by the doctor.
+            </p>
+
+            <p>
+                Maintain proper rest, hydration and healthy diet.
+            </p>
+
+            <p>
+                Follow up with the doctor if symptoms continue.
+            </p>
+
+        </div>
+
+
+        <div class="signature">
+
+            <div>
+                <p>______________________</p>
+                <b>Patient Signature</b>
+            </div>
+
+            <div>
+                <p>______________________</p>
+                <b>Doctor Signature</b>
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+
+            <p>Thank You for Visiting CITY HOSPITAL</p>
+
+            <p>
+                This is a computer generated prescription slip.
+            </p>
+
+        </div>
+
+
+        <button class="print-btn" onclick="window.print()">
+            🖨️ Print Parchi
+        </button>
 
     </div>
 
 </div>
-  <script src="./script.js"></script>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
